@@ -1,0 +1,78 @@
+@use '../utils/variables' as *;
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  gap: 16px;
+}
+
+.form-div {
+  position: relative;
+  display: flex;
+  width: 100%;
+}
+
+.lable {
+  visibility: hidden;
+  position: absolute;
+  top: 18px;
+  left: 32px;
+}
+
+.input {
+  padding: 16px 24px;
+  border-radius: 32px;
+  border: 1px solid var(--Secondary-colors2);
+  background-color: transparent;
+  color: var(--Primary-colors1);
+  outline: none;
+  font-weight: 400;
+  font-size: 12px;
+  font-family: 'Roboto', sans-serif;
+  transition: box-shadow 0.3s, background-color 0.3s;
+  width: 100%;
+
+  @media screen and (min-width: $bp-desktop) {
+    padding: 18px 32px;
+  }
+
+  &::placeholder {
+    line-height: 1.15;
+    font-weight: 400;
+    font-size: 12px;
+    font-family: 'Roboto', sans-serif;
+    color: var(--Primary-colors1);
+  }
+
+  &:focus {
+    background-color: var(--Secondary-colors2);
+    outline: none;
+    box-shadow: 0 0 4px var(--Secondary-colors2);
+  }
+}
+
+.confidentiality-input {
+  margin: 0 auto;
+  width: 100%;
+  text-align: center;
+  height: 100%;
+  max-width: 213px;
+  max-height: 36px;
+  font-family: 'Roboto', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.5;
+  color: var(--Secondary-colors2);
+}
+
+
+.confidentiality-link {
+  color: var(--Secondary-colors2);
+  font-weight: 400;
+  text-decoration: underline 1px;
+  font-family: 'Roboto', sans-serif;
+}

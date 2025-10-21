@@ -1,0 +1,13 @@
+@use '../utils/variables' as *;
+
+.main-logo {
+  flex-grow: 0;
+  justify-content: flex-start;
+  text-transform: capitalize;
+  line-height: 0.95;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 22px;
+  font-family: 'Play', sans-serif;
+  color: var(--Primary-colors2);
+}

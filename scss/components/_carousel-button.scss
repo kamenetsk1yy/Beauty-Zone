@@ -1,0 +1,38 @@
+@use '../utils/variables' as *;
+
+.carousel {
+  display: none;
+
+  @media screen and (min-width: 880px) {
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    padding: 0;
+    flex-shrink: 0;
+    border-radius: 50%;
+    fill: var(--Primary-colors3);
+    background-color: var(--Primary-colors1);
+    border: 1px solid var(--Primary-colors3);
+    transition: 0.25s, transform 0.3s;
+
+  }
+}
+
+.carousel.next {
+  transform: rotate(180deg);
+}
+
+.carousel.next:hover,
+.carousel:hover {
+  fill: var(--Primary-colors1);
+  border: 1px solid var(--Primary-colors1);
+  background-color: var(--Primary-colors2);
+  transform: rotate(-360deg) scale(1.2);
+}
+
+.carousel.next:hover {
+  transform: rotate(540deg) scale(1.2);
+}

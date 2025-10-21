@@ -1,0 +1,110 @@
+@use '../utils/variables' as *;
+
+.main-section {
+  position: relative;
+  padding-top: 106px;
+  width: 100%;
+  max-width: 1240px;
+  margin-bottom: 126px;
+
+  @media screen and (max-width: $bp-desktop) {
+    margin-bottom: 56px;
+  }
+  &__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin: auto;
+
+    @media screen and (min-width: $bp-desktop) {
+      align-items: start;
+      margin-bottom: 126px;
+      margin-left: 106px;
+      width: 100%;
+      height: 100%;
+      max-height: 408px;
+      max-width: 530px;
+    }
+
+    &__main-box {
+      margin-bottom: 32px;
+
+      @media screen and (min-width: $bp-desktop) {
+        width: 100%;
+        height: 100%;
+        max-height: 265px;
+        max-width: 529px;
+        margin-bottom: 40px;
+        font-size: 108px;
+      }
+
+      &__additional-text {
+        margin: 0;
+        padding: 0;
+        text-align: center;
+        font-size: 12px;
+        line-height: 1.5;
+
+        @media screen and (min-width: $bp-desktop) {
+          margin: 0;
+          padding-bottom: 16px;
+          width: 100%;
+          max-width: 200px;
+          max-height: 21px;
+          font-size: 18px;
+        }
+      }
+
+      &__main-text {
+        line-height: .85;
+        font-weight: 700;
+        font-size: 54px;
+        font-family: 'Play', sans-serif;
+        text-align: center;
+        margin: 0;
+        color: var(--Primary-colors2);
+
+
+        @media screen and (min-width: $bp-desktop) {
+          line-height: 0.81;
+          text-align: left;
+          font-weight: 700;
+          font-size: 140px;
+          font-family: 'Play', sans-serif;
+        }
+      }
+    }
+  }
+}
+
+
+.button-div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  max-width: 201px;
+
+  @media screen and (min-width: $bp-desktop) {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    max-width: 238px;
+    max-height: 103px;
+  }
+
+  &__text-under-button {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    font-weight: 400;
+    font-size: 11px;
+
+    @media screen and (min-width: $bp-desktop) {
+      font-size: 12px;
+      line-height: 1.5;
+    }
+  }
+}

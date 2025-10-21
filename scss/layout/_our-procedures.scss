@@ -1,0 +1,128 @@
+@use '../utils/variables' as *;
+
+.our-procedures {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 48px;
+  width: 100%;
+  max-width: 1240px;
+  margin: 0 auto 40px auto;
+
+  @media screen and (min-width: $bp-desktop) {
+    margin: 0 auto 96px auto;
+  }
+
+  > :nth-child(1) {
+    text-align: center;
+    font-size: 32px;
+    font-weight: 500;
+    font-family: 'Roboto', 'sans-serif';
+    line-height: 1.2;
+
+    @media screen and (min-width: $bp-desktop) {
+      font-size: 64px;
+      font-weight: 700;
+      line-height: 1.5;
+      font-family: 'Play', sans-serif;
+    }
+
+    :nth-child(1) {
+      text-align: center;
+      font-size: 32px;
+      font-weight: 500;
+      font-family: 'Roboto', 'sans-serif';
+      line-height: 1.2;
+
+      @media screen and (min-width: $bp-desktop) {
+        font-size: 64px;
+        font-weight: 700;
+        line-height: 1.5;
+        font-family: 'Play', sans-serif;
+      }
+    }
+  }
+
+  &__container-img {
+    display: flex;
+    align-items: center;
+    column-gap: 32px;
+    justify-content: center;
+
+    &__button {
+      display: none;
+
+      @media screen and (min-width: 880px) {
+        display: flex;
+      }
+
+    }
+
+    .swiper {
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      z-index: 2;
+      width: 100%;
+      max-width: 344px;
+
+      @media screen and (min-width: 880px) {
+        max-width: 704px;
+      }
+
+      @media screen and (min-width: $bp-desktop) {
+        max-width: 1064px;
+      }
+    }
+
+    &__ul-images {
+      display: flex;
+      flex-wrap: nowrap;
+      margin-bottom: 32px;
+
+      &__li {
+        @media screen and (min-width: $bp-desktop) {
+          flex: 0 0 auto;
+        }
+
+        &__gradient {
+          width: 100%;
+          height: 100%;
+          border-radius: 4px 120px;
+          overflow: hidden;
+          position: relative;
+
+          &::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            height: 60%;
+            background: linear-gradient(180deg,
+                rgba(1, 28, 68, 0) 47.4%,
+                rgba(1, 28, 68, 0.73) 82.66%,
+                #011c44 99.06%);
+            pointer-events: none;
+          }
+
+          &__p {
+            position: absolute;
+            z-index: 1;
+            margin: 0;
+            text-align: center;
+            bottom: 32px;
+            left: 115px;
+            right: 77px;
+            font-family: 'Roboto', sans-serif;
+            font-weight: 400;
+            font-size: 22px;
+            line-height: 1.2;
+            color: var(--Primary-colors1);
+          }
+        }
+      }
+    }
+  }
+}

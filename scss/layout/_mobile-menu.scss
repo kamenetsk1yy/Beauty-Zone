@@ -1,0 +1,125 @@
+@use '../utils/variables' as *;
+
+.mobile-menu {
+   position: fixed;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   background-color: var(--Primary-colors1);
+   transform: translateX(100%);
+   transition: transform .3s;
+   z-index: 4;
+
+   .mobile-menu-container-icons {
+      display: flex;
+      flex-direction: row;
+      gap: 16px;
+   }
+
+   .footer__nav-link-menu {
+      display: flex;
+      align-items: flex-start;
+      justify-content: flex-start;
+      margin: 32px 20px 0;
+      line-height: 1.06;
+      row-gap: 16px;
+      flex-grow: 0;
+      width: none;
+
+      .footer__icons__modify:hover {
+         fill: var(--Primary-colors2);
+      }
+
+      .footer__icons__modify {
+         fill: var(--Primary-colors3);
+         transition: fill .25s;
+      }
+
+      .footer__nav-link:hover {
+         color: var(--Primary-colors2);
+      }
+
+      .footer__nav-link {
+         color: var(--Primary-colors3);
+         font-size: 14px;
+         transition: color .25s;
+      }
+   }
+
+
+
+   &__nav {
+      margin: 16px 20px 0;
+      display: flex;
+      align-items: center;
+      z-index: 5;
+      flex: 0 0 auto;
+      justify-content: space-between;
+
+      @media screen and (min-width: $bp-desktop) {
+         display: none;
+      }
+
+      &__main-logo {
+         display: block;
+         z-index: 6;
+      }
+   }
+
+   &__menu-btn-close {
+      position: absolute;
+      width: 40px;
+      height: 40px;
+      padding: 0;
+      border: none;
+      background: transparent;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      z-index: 1001;
+      top: 16px;
+      right: 20px;
+      transition: transform .18s;
+
+      &::before,
+      &::after {
+         content: '';
+         z-index: 7;
+         width: 20px;
+         height: 2px;
+         background: var(--Primary-colors3);
+         transform-origin: center;
+         transition: transform .18s, background 0.18s, width .18s;
+      }
+
+      &::before {
+         transform: translate(-50%, -50%) rotate(45deg);
+      }
+
+      &::after {
+         transform: translate(-50%, -50%) rotate(-45deg);
+      }
+
+      &:hover::before,
+      &:hover::after {
+         background: var(--Primary-colors1);
+      }
+
+      /* состояние "активно" — можно использовать для закрепления чёрного крестика */
+      &.is-active::before {
+         transform: translate(-50%, -50%) rotate(0deg);
+         width: 0;
+      }
+
+      &.is-active::after {
+         transform: translate(-50%, -50%) rotate(90deg);
+         background: #000;
+      }
+   }
+
+   &.is-open {
+      transform: translateX(0);
+   }
+}

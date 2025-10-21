@@ -1,0 +1,191 @@
+@use '../utils/variables' as *;
+
+.button-main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  max-height: 44px;
+  padding: 16px 24px;
+  color: var(--Primary-colors1);
+  background-color: var(--Primary-colors2);
+  font-weight: 600;
+  font-size: 14px;
+  font-family: 'Roboto', sans-serif;
+  margin-bottom: 8px;
+  border-radius: 24px;
+  border: 2px solid var(--Primary-colors2);
+  transition: background-color .25s, color 0.25s, box-shadow 0.25s, transform 0.3s;
+
+  @media screen and (min-width: $bp-desktop) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    max-height: 53px;
+    padding: 16px 32px;
+    color: var(--Primary-colors1);
+    background-color: var(--Primary-colors2);
+    font-weight: 600;
+    font-size: 18px;
+    font-family: 'Roboto', sans-serif;
+    margin-bottom: 14px;
+    border-radius: 32px;
+    border: 2px solid var(--Primary-colors2);
+    transition: background-color .25s, color 0.25s, box-shadow 0.25s, transform 0.3s;
+  }
+}
+
+.button-input {
+  font-size: 18px;
+  font-family: 'Roboto', sans-serif;
+  font-style: normal;
+  color: #fff;
+  background-color: var(--Primary-colors2);
+  font-weight: 600;
+  padding: 16px 32px;
+  margin-bottom: 8px;
+  border-radius: 32px;
+  border: 2px solid transparent;
+  transition: background-color .25s, color 0.25s, box-shadow 0.25s, transform 0.3s;
+}
+
+.button-main:hover,
+.button-input:hover {
+  color: var(--Primary-colors2);
+  border: 2px solid var(--Primary-colors2);
+  background-color: #fff;
+  box-shadow: 0 0 4px 1px var(--Primary-colors2);
+  cursor: pointer;
+  transform: scale(1.040);
+}
+
+.modal-btn-close {
+  position: absolute;
+  top: 35px;
+  right: 35px;
+  width: 52px;
+  height: 52px;
+  padding: 0;
+  border: none;
+  border-radius: 6px;
+  background: rgba(180, 83, 107, 0.11);
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s, color 0.3s, box-shadow 0.3s, transform 0.3s;
+
+  @media screen and (max-width: $bp-desktop) {
+    top: 15px;
+    width: 35px;
+    height: 35px;
+    right: 15px;
+  }
+}
+
+.X {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 2em;
+  height: 1.5px;
+  background-color: rgb(255, 255, 255);
+  transform: translateX(-50%) rotate(45deg);
+}
+
+.Y {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 2em;
+  height: 1.5px;
+  background-color: rgb(255, 255, 255);
+  transform: translateX(-50%) rotate(-45deg);
+}
+
+.close {
+  position: absolute;
+  display: flex;
+  padding: 0.8rem 1.5rem;
+  align-items: center;
+  justify-content: center;
+  transform: translateX(-50%);
+  top: -63%;
+  left: 50%;
+  width: 3em;
+  height: 1.7em;
+  font-size: 12px;
+  background-color: rgb(19, 22, 24);
+  color: rgb(187, 229, 236);
+  border: none;
+  border-radius: 3px;
+  pointer-events: none;
+  opacity: 0;
+}
+
+.modal-btn-close:hover {
+  background-color: rgb(211, 21, 21);
+}
+
+.modal-btn-close:active {
+  background-color: rgb(130, 0, 0);
+}
+
+.modal-btn-close:hover > .close {
+  animation: close 0.2s forwards 0.25s;
+}
+
+@keyframes close {
+  100% {
+    opacity: 1;
+  }
+}
+
+.menu-btn-close {
+  position: relative;
+  width: 30px;
+  height: 30px;
+  padding: 0;
+  border: 1px solid transparent;
+  background: transparent;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 1000;
+  transition: border-color .18s ease, border-radius .18s ease, background-color .18s ease;
+
+  &:hover {
+    border-radius: 5px;
+    border-color: lightgray;
+  }
+
+  &:focus {
+    outline: none;
+  }
+
+  &::before,
+  &::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 24px;
+    height: 2px;
+    background-color: var(--Primary-colors3);
+    transform-origin: center;
+    transition: transform .18s, background-color .18s;
+    border-radius: 999px;
+  }
+
+  &::before {
+    transform: translate(-50%, -50%) rotate(45deg);
+  }
+
+  &::after {
+    transform: translate(-50%, -50%) rotate(-45deg);
+  }
+}

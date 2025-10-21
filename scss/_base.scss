@@ -1,0 +1,114 @@
+@use 'utils/variables' as *;
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+address {
+  font-style: normal;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  width: none;
+}
+
+a {
+  display: inline-block;
+}
+
+body {
+  position: relative;
+  margin: 0 auto;
+  max-width: 1440px;
+  font-family: 'Play', 'Roboto', sans-serif;
+  color: var(--Primary-colors3);
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.5;
+  background-color: var(--Primary-colors1);
+
+  &::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image:
+      linear-gradient(94deg, #fff 9.65%, rgba(255, 255, 255, 0.85) 26.08%, rgba(255, 255, 255, 0.19) 52.74%, rgba(255, 255, 255, 0) 74.46%),
+      url('../images/background-main.jpg');
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-size: contain;
+    max-width: 1440px;
+    max-height: 700px;
+    z-index: -1;
+
+    @media screen and (max-width: $bp-desktop) {
+      max-height: 490px;
+      background-size: cover;
+      background-position: bottom;
+    }
+
+    @media screen and (max-width: 603px) {
+      max-height: 405px;
+    }
+
+    @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+      background-image:
+        linear-gradient(94deg, #fff 9.65%, rgba(255, 255, 255, 0.85) 26.08%, rgba(255, 255, 255, 0.19) 52.74%, rgba(255, 255, 255, 0) 74.46%),
+        url('../images/background-main@2x.jpg');
+    }
+  }
+
+  &::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    top: 400px;
+    background-repeat: no-repeat;
+    background-image: -webkit-image-set(url('../images/smooth-background.jpg') 1x,
+        url('../images/smooth-background@2x.jpg') 2x);
+    background-image: image-set(url('../images/smooth-background.jpg') 1x,
+        url('../images/smooth-background@2x.jpg') 2x);
+    background-position: center top;
+    max-width: 1440px;
+    z-index: -1;
+    transform: translateY(1%);
+    background-size: cover;
+
+    @media screen and (min-width: $bp-tablet) {
+      transform: translateY(8%);
+      background-position: center top;
+      background-size: contain;
+
+    }
+
+    @media screen and (min-width: $bp-desktop) {
+      transform: translateY(31%);
+      background-size: contain;
+    }
+  }
+
+  section {
+    display: flex;
+    margin: 0 auto;
+  }
+}
+
+
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}

@@ -1,0 +1,26 @@
+@use '../utils/variables' as *;
+
+.pagination-dynamic {
+   display: none;
+
+   @media screen and (min-width: 880px) {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 24px;
+   }
+
+   &__button {
+      align-items: center;
+      background-color: var(--Secondary-colors1);
+      width: 11px;
+      height: 11px;
+      border-radius: 50%;
+      padding: 0;
+      transition: background-color .3s;
+
+      &--active {
+         background-color: var(--Primary-colors2);
+      }
+   }
+}

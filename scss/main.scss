@@ -1,0 +1,43 @@
+@use './utils/variables' as *;
+@use './layout/header' as *;
+@use './layout/main-section' as *;
+@use './layout/section-we' as *;
+@use './utils/fonts' as *;
+@use './base' as *;
+@use './utils/utils' as *;
+
+@use './components/buttons' as *;
+@use './components/carousel-button' as *;
+@use './components/logo' as *;
+@use './components/form-terms' as *;
+
+@use './utils/texts' as *;
+@use './components/links' as *;
+
+@use './layout/mobile-menu' as *;
+@use './layout/why-us' as *;
+@use './layout/our-procedures' as *;
+@use './components/Pagination-dynamic' as *;
+@use './layout/how-to-find-us' as *;
+@use './layout/footer' as *;
+@use './layout/modal' as *;
+// @use './utils/mixins' as *;
+
+
+$primary-1: #ffffff;
+$primary-2: #2b7fff;
+$primary-3: #011c44;
+$secondary-1: #4a4a4a;
+$secondary-2: #747272;
+$secondary-3: #011f4a;
+$secondary-4: #ffd02b;
+
+:root {
+  --Primary-colors1: #{$primary-1};
+  --Primary-colors2: #{$primary-2};
+  --Primary-colors3: #{$primary-3};
+  --Secondary-colors1: #{$secondary-1};
+  --Secondary-colors2: #{$secondary-2};
+  --Secondary-colors3: #{$secondary-3};
+  --Secondary-colors4: #{$secondary-4};
+}

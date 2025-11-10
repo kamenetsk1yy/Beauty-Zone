@@ -20,6 +20,7 @@
   }
 
   &::after {
+    display: none;
     position: absolute;
     background-image: url('../images/footer-bottom-img.png');
     background-repeat: no-repeat;
@@ -29,6 +30,10 @@
     content: '';
     bottom: 0;
     right: 0;
+
+    @media screen and (min-width: $bp-tablet) {
+      display: block;
+    }
   }
 
   &__icons-link {

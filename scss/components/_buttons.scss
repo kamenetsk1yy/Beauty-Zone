@@ -37,17 +37,22 @@
 }
 
 .button-input {
-  font-size: 18px;
   font-family: 'Roboto', sans-serif;
   font-style: normal;
   color: #fff;
   background-color: var(--Primary-colors2);
   font-weight: 600;
-  padding: 16px 32px;
+  font-size: 16px;
+  padding: 12px 24px;
   margin-bottom: 8px;
   border-radius: 32px;
   border: 2px solid transparent;
   transition: background-color .25s, color 0.25s, box-shadow 0.25s, transform 0.3s;
+
+  @media screen and (min-width: $bp-desktop) {
+    padding: 16px 32px;
+    font-size: 18px;
+  }
 }
 
 .button-main:hover,

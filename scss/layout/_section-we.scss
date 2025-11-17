@@ -127,6 +127,7 @@
   &__stars {
     position: relative;
     display: none;
+    pointer-events: none;
 
     @media screen and (min-width: $bp-desktop) {
       display: block;

@@ -5,43 +5,49 @@
   flex-direction: column;
   align-items: center;
   gap: 24px;
-  max-width: 1060px;
-  max-height: none;
-  margin: 0 18px;
+  margin-bottom: 0;
 
   @media screen and (min-width: $bp-desktop) {
     gap: 48px;
-    max-height: 602px;
-    margin: 0 auto 96px auto;
+    margin-bottom: 96px;
   }
 
-  > :nth-child(1) {
+  > .container {
+    padding: 0;
+  }
+
+  &__title {
     text-align: center;
     font-size: 32px;
     font-weight: 500;
     font-family: 'Roboto', 'sans-serif';
     line-height: 1.2;
+    margin-bottom: 24px;
 
     @media screen and (min-width: $bp-desktop) {
       font-size: 64px;
       font-weight: 700;
       line-height: 1.5;
       font-family: 'Play', sans-serif;
+      margin-bottom: 48px;
     }
 
     :nth-child(1) {
-      text-align: center;
-      font-size: 32px;
-      font-weight: 500;
-      font-family: 'Roboto', 'sans-serif';
-      line-height: 1.2;
-
       @media screen and (min-width: $bp-desktop) {
+        text-align: center;
         font-size: 64px;
         font-weight: 700;
         line-height: 1.5;
         font-family: 'Play', sans-serif;
       }
+
+      text-align: center;
+      font-size: 32px;
+      font-weight: 500;
+      font-family: 'Roboto',
+      'sans-serif';
+      line-height: 1.2;
+      color: var(--Primary-colors2);
     }
   }
 
@@ -64,7 +70,6 @@
 
     &__map {
       display: block;
-      flex: 1 1 auto;
       width: 100svw;
       height: 100%;
       min-height: 320px;
@@ -72,14 +77,13 @@
       overflow: hidden;
 
       @media screen and (min-width: $bp-desktop) {
+        flex: 0 0 auto;
         border-radius: 32px;
-        max-width: none;
-        width: auto;
-        min-height: 480px;
+        width: 605px;
+        height: 481px;
       }
 
       iframe {
-        min-height: inherit;
         border: 0;
         width: 100%;
         height: 100%;
@@ -97,7 +101,7 @@
       padding: 32px 24px;
       border-radius: 32px;
       background-image: url('/images/background-input.png');
-      
+
       @media screen and (min-width: $bp-mobile) {
         padding: 48px 56px;
       }

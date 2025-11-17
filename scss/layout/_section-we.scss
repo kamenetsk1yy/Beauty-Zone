@@ -3,13 +3,10 @@
 .section-we {
   display: flex;
   justify-content: space-between;
-  margin: 0px 20px 104px 20px;
-  
+  margin-bottom: 104px;
   position: relative;
 
   @media screen and (min-width: $bp-desktop) {
-    width: 100%;
-    max-width: 1240px;
     margin-bottom: 176px;
   }
 

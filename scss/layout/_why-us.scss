@@ -25,7 +25,7 @@ section#second-section {
     }
 
     @media screen and (min-width: $bp-desktop) {
-      background-size: cover;
+      background-size: 100% 1440px;
     }
   }
 }

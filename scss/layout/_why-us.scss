@@ -17,11 +17,11 @@ section#second-section {
     background-image: image-set(url('../images/smooth-background.jpg') 1x,
         url('../images/smooth-background@2x.jpg') 2x);
     background-position: center top;
-    background-size: cover;
+    // background-size: contain;
     z-index: -1;
 
     @media screen and (min-width: $bp-tablet) {
-      background-size: cover;
+      // background-size: contain;
     }
 
     @media screen and (min-width: $bp-desktop) {
